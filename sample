@@ -371,7 +371,7 @@ async function EditForm(){
        console.log(formData,"editable data");
        const id=localStorage.getItem("updatedid")  
        console.log(id,"edited data updated id display here")  ;
-    fetch(`http://localhost:3000/getupdatedata/${id}`).then(response=>response.json())
+    fetch(`http://localhost:3000/data/${id}`).then(response=>response.json())
        .then(data=>{
         console.log('Form data', data);      //i am getting all the data which i have submitted
         document.getElementById("CID_European").value=data.CID_European;
@@ -385,10 +385,6 @@ async function EditForm(){
         })
       
     }
-
-
-
-
 
 //update form
 async function populateFormFields(){
