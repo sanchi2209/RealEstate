@@ -1,3 +1,24 @@
+
+ Data.CID_European=document.getElementById("CID_European").value,
+         Data.CID_American=document.getElementById("CID_American").value,
+          Data.CID_Asian=document.getElementById("CID_Asian").value,
+         Data.STP_FLS=document.getElementById("STP_FLS").value,
+          Data.STP_SLS=document.getElementById("STP_SLS").value,
+          Data.EEE_NW=document.getElementById("EEE_NW").value,
+          Data.SAN_E2C=document.getElementById("SAN_E2C").value,
+          Data.User=document.getElementById("User").value
+        //  }
+         const id=localStorage.getItem("updatedid")  
+         console.log(id,"edited data updated id display here")  ;
+         const response=await fetch(`http://localhost:3000/data/${id}`,
+         {
+           method:'PUT',
+           headers:{
+             'Content-Type':'application/json'
+           },
+           body:JSON.stringify(formData)
+
+
 backend
 
 app.get("/getupdatedata/:id",async(req,res)=>{
